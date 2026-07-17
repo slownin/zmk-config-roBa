@@ -80,19 +80,19 @@
 
         mac {
             bindings = <
-&mt LEFT_ALT Q      &kp W          &kp E             &kp R         &kp T                                      &kp Y        &kp U  &kp I      &kp O    &mt RIGHT_ALT P
-&mt LEFT_CONTROL A  &kp S          &kp D             &kp F         &kp G      &kp GRAVE        &kp BACKSLASH  &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z    &kp X          &kp C             &kp V         &kp B      &lt 4 EQUAL      &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&lt 6 ESCAPE        &kp ALT_ERASE  &kp LEFT_CONTROL  &kp LEFT_GUI  &kp SPACE  &lt 3 TAB        &kp BACKSPACE  &lt 2 ENTER                             &lt 5 ESCAPE
+&mt LEFT_ALT Q      &kp W          &kp E                        &kp R                    &kp T                                      &kp Y        &kp U  &kp I      &kp O    &mt RIGHT_ALT P
+&mt LEFT_CONTROL A  &kp S          &kp D                        &kp F                    &kp G      &kp GRAVE        &kp BACKSLASH  &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z    &kp X          &kp C                        &kp V                    &kp B      &lt 4 EQUAL      &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&lt 6 ESCAPE        &kp ALT_ERASE  &mt LEFT_CONTROL LANGUAGE_2  &mt LEFT_GUI LANGUAGE_1  &kp SPACE  &lt 3 TAB        &kp BACKSPACE  &lt 2 ENTER                             &lt 5 ESCAPE
             >;
         };
 
         windows {
             bindings = <
-&mt LEFT_ALT Q      &kp W          &kp E         &kp R             &kp T                                      &kp Y        &kp U  &kp I      &kp O    &mt RIGHT_ALT P
-&mt LEFT_CONTROL A  &kp S          &kp D         &kp F             &kp G      &kp GRAVE        &kp BACKSLASH  &kp H        &kp J  &kp K      &kp L    &kp MINUS
-&mt LEFT_SHIFT Z    &kp X          &kp C         &kp V             &kp B      &lt 4 EQUAL      &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&lt 6 ESCAPE        &kp ALT_ERASE  &kp LEFT_GUI  &kp LEFT_CONTROL  &kp SPACE  &lt 3 TAB        &kp BACKSPACE  &lt 2 ENTER                             &lt 5 ESCAPE
+&mt LEFT_ALT Q      &kp W          &kp E                    &kp R                        &kp T                                      &kp Y        &kp U  &kp I      &kp O    &mt RIGHT_ALT P
+&mt LEFT_CONTROL A  &kp S          &kp D                    &kp F                        &kp G      &kp GRAVE        &kp BACKSLASH  &kp H        &kp J  &kp K      &kp L    &kp MINUS
+&mt LEFT_SHIFT Z    &kp X          &kp C                    &kp V                        &kp B      &lt 4 EQUAL      &kp SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
+&lt 6 ESCAPE        &kp ALT_ERASE  &mt LEFT_GUI LANGUAGE_2  &mt LEFT_CONTROL LANGUAGE_1  &kp SPACE  &lt 3 TAB        &kp BACKSPACE  &lt 2 ENTER                             &lt 5 ESCAPE
             >;
         };
 
