@@ -78,7 +78,7 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        mac {
             bindings = <
 &mt LEFT_ALT Q      &kp W          &kp E             &kp R         &kp T                                      &kp Y        &kp U  &kp I      &kp O    &mt RIGHT_ALT P
 &mt LEFT_CONTROL A  &kp S          &kp D             &kp F         &kp G      &kp GRAVE        &kp BACKSLASH  &kp H        &kp J  &kp K      &kp L    &kp MINUS
@@ -87,7 +87,7 @@
             >;
         };
 
-        FUNCTION {
+        windows {
             bindings = <
 &mt LEFT_ALT Q      &kp W          &kp E         &kp R             &kp T                                      &kp Y        &kp U  &kp I      &kp O    &mt RIGHT_ALT P
 &mt LEFT_CONTROL A  &kp S          &kp D         &kp F             &kp G      &kp GRAVE        &kp BACKSLASH  &kp H        &kp J  &kp K      &kp L    &kp MINUS
@@ -96,7 +96,7 @@
             >;
         };
 
-        NUM {
+        num,sign {
             bindings = <
 &kp NUMBER_1     &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp N5                           &kp NUMBER_6          &kp NUMBER_7           &kp NUMBER_8    &kp NUMBER_9       &kp NUMBER_0
 &kp EXCLAMATION  &kp AT_SIGN    &kp HASH      &kp DOLLAR    &kp PERCENT  &trans      &trans  &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &kp LEFT_BRACE  &kp RIGHT_BRACE    &trans
@@ -105,7 +105,7 @@
             >;
         };
 
-        ARROW {
+        func,arrow {
             bindings = <
 &trans  &kp F1  &kp F2   &kp F3   &kp F4                           &kp LA(LEFT_ARROW)  &kp HOME            &kp END           &kp LA(RIGHT_ARROW)  &kp PAGE_UP
 &trans  &kp F5  &kp F6   &kp F7   &kp F8   &kp INSERT      &to 0   &kp LEFT_ARROW      &kp DOWN_ARROW      &kp UP_ARROW      &kp RIGHT_ARROW      &kp PAGE_DOWN
@@ -114,7 +114,7 @@
             >;
         };
 
-        MOUSE {
+        mouse {
             bindings = <
 &trans  &trans    &trans    &trans    &trans                      &trans  &trans    &trans    &trans    &trans
 &trans  &mkp MB2  &mkp MB3  &mkp MB1  &trans  &trans      &trans  &trans  &mkp MB1  &mkp MB3  &mkp MB2  &trans
@@ -123,7 +123,7 @@
             >;
         };
 
-        SCROLL {
+        scroll {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
