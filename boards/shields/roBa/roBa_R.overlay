@@ -1,4 +1,6 @@
 #include "roBa.dtsi"
+#include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
 
 &default_transform {
     col-offset = <6>;
@@ -14,11 +16,40 @@
             ;
 };
 
+&zip_temp_layer {
+    // キー入力から500msはAutoMouseLayer(AML)を発動しない
+    require-prior-idle-ms = <500>;
+
+    // AutoMouseLayer(AML)が有効な時に下記以外のキーを押すとAMLを解除する
+    excluded-positions = <
+        18 // J
+        19 // K
+        20 // L
+    >;
+};
+
+&pointer_accel {
+    // 低速操作は細かく、高速操作は大きく動かす
+    input-type = <INPUT_EV_REL>;
+    track-remainders;
+    min-factor = <700>;
+    max-factor = <3000>;
+    speed-threshold = <1200>;
+    speed-max = <6000>;
+    acceleration-exponent = <2>;
+};
+
 / {
     trackball_listener {
         status = "okay";
         compatible = "zmk,input-listener";
         device = <&trackball>;
+
+        // トラックボール使用後、10秒間、マウスレイヤーを有効化する
+        input-processors = <
+            &pointer_accel
+            &zip_temp_layer 4 10000
+        >;
     };
 };
 
