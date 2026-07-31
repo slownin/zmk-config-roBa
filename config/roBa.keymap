@@ -6,9 +6,7 @@
 
 // マウスキーを押したらタイムアウトを10秒間延長する
 
-&mkp_input_listener {
-    input-processors = <&zip_temp_layer 4 10000>;
-};
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 10000>; };
 
 &mt {
     flavor = "balanced";
@@ -20,6 +18,7 @@
 &trackball {
     // マウス層は zip_temp_layer のみ（automouse-layer は require-prior-idle と併用不可）
     // automouse-layer = <4>;
+
     scroll-layers = <5>;
 
     // arrows {
@@ -43,22 +42,18 @@
         //     bindings = <&kp TAB>;
         //     key-positions = <11 12>;
         // };
-
         // shift_tab {
         //     bindings = <&kp LS(TAB)>;
         //     key-positions = <12 13>;
         // };
-
         // muhennkann {
         //     bindings = <&to_layer_0 INT_MUHENKAN>;
         //     key-positions = <11 10>;
         // };
-
         // double_quotation {
         //     bindings = <&kp DOUBLE_QUOTES>;
         //     key-positions = <20 21>;
         // };
-
         // eq {
         //     bindings = <&kp EQUAL>;
         //     key-positions = <24 25>;
@@ -93,7 +88,7 @@
 &mt LEFT_ALT Q      &kp W         &kp E                        &kp R                    &kp T                                        &kp Y        &kp U  &kp I      &kp O    &mt RIGHT_ALT P
 &mt LEFT_CONTROL A  &kp S         &kp D                        &kp F                    &kp G      &kp GRAVE        &kp BACKSLASH    &kp H        &kp J  &kp K      &kp L    &kp MINUS
 &mt LEFT_SHIFT Z    &kp X         &kp C                        &kp V                    &kp B      &lt 4 EQUAL      &lt 4 SEMICOLON  &kp N        &kp M  &kp COMMA  &kp DOT  &mt RIGHT_SHIFT SLASH
-&lt 6 ESCAPE        &kp LEFT_ALT  &mt LEFT_CONTROL LANGUAGE_2  &mt LEFT_GUI LANGUAGE_1  &kp SPACE  &lt 3 TAB        &kp BACKSPACE    &lt 2 ENTER                             &lt 5 ESCAPE
+&lt 6 ESCAPE        &kp CAPSLOCK  &mt LEFT_CONTROL LANGUAGE_2  &mt LEFT_GUI LANGUAGE_1  &kp SPACE  &lt 3 TAB        &kp BACKSPACE    &lt 2 ENTER                             &lt 5 ESCAPE
             >;
         };
 
