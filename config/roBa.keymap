@@ -6,7 +6,7 @@
 
 // マウスキーを押したらタイムアウトを10秒間延長する
 
-&mkp_input_listener { input-processors = <&zip_temp_layer 4 10000>; };
+&mkp_input_listener { input-processors = <&zip_temp_layer 4 500>; };
 
 &mt {
     flavor = "balanced";

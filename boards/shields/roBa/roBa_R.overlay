@@ -48,7 +48,7 @@
         // トラックボール使用後、10秒間、マウスレイヤーを有効化する
         input-processors = <
             &pointer_accel
-            &zip_temp_layer 4 10000
+            &zip_temp_layer 4 800
         >;
     };
 };
