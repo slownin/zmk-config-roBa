@@ -28,7 +28,7 @@
         layer4_override {
             layers = <4>;
             /* レイヤー4にいる時だけ移動速度を通常（1倍）にする */
-            input-processors = <&zip_xy_scaler 1 1>;
+            input-processors = <&zip_xy_scaler 2 1>;
         };
     };
 };
