@@ -1,6 +1,19 @@
 #include "roBa.dtsi"
 #include <input/processors.dtsi>
 
+/* 加速度プロセッサのパラメータ設定（PMW3610向けの標準的な目安値） */
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    codes = <INPUT_REL_X INPUT_REL_Y>;
+    sensitivity = <1000>;        /* 全体感度（1000が等倍） */
+    min-factor = <600>;          /* ゆっくり動かした時の最小倍率（0.6倍） */
+    max-factor = <3000>;         /* 素早く動かした時の最大倍率（3.0倍） */
+    acceleration-exponent = <2>; /* 加速カーブ（1: 線形, 2: 二次曲線） */
+    speed-threshold = <1200>;    /* 加速が始まる速度のしきい値 */
+    speed-max = <6000>;          /* 最大倍率に達する速度の上限 */
+    y-boost = <1000>;            /* Y軸（上下）の追加補正（1000が等倍） */
+};
+
 &default_transform {
     col-offset = <6>;
 };
@@ -27,8 +40,8 @@
         /* レイヤー4の時だけ上書きする設定 */
         layer4_override {
             layers = <4>;
-            /* レイヤー4にいる時だけ移動速度を通常（1.5倍）にする */
-            input-processors = <&zip_xy_scaler 3 2>;
+            /* 加速度設定を適用 */
+            input-processors = <&pointer_accel>;
         };
     };
 };
