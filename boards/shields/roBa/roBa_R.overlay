@@ -8,8 +8,8 @@
     track-remainders;
     min-factor = <600>;          /* ゆっくり動かした時の最小倍率（0.6倍） */
     max-factor = <3000>;         /* 素早く動かした時の最大倍率（3.0倍） */
-    speed-threshold = <1200>;    /* 加速が始まる速度のしきい値 */
-    speed-max = <6000>;          /* 最大倍率に達する速度の上限 */
+    speed-threshold = <600>;    /* 加速が始まる速度のしきい値 */
+    speed-max = <3000>;          /* 最大倍率に達する速度の上限 */
     acceleration-exponent = <2>; /* 加速カーブ（1: 線形, 2: 二次曲線） */
 };
 
