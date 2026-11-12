@@ -1,5 +1,17 @@
 #include "roBa.dtsi"
 #include <input/processors.dtsi>
+#include <behaviors/input_gestures_accel.dtsi>
+
+/* 加速度プロセッサのパラメータ設定 */
+&pointer_accel {
+    input-type = <INPUT_EV_REL>;
+    track-remainders;
+    min-factor = <600>;          /* ゆっくり動かした時の最小倍率（0.6倍） */
+    max-factor = <3000>;         /* 素早く動かした時の最大倍率（3.0倍） */
+    speed-threshold = <900>;    /* 加速が始まる速度のしきい値 */
+    speed-max = <4500>;          /* 最大倍率に達する速度の上限 */
+    acceleration-exponent = <2>; /* 加速カーブ（1: 線形, 2: 二次曲線） */
+};
 
 &default_transform {
     col-offset = <6>;
@@ -27,8 +39,8 @@
         /* レイヤー4の時だけ上書きする設定 */
         layer4_override {
             layers = <4>;
-            /* レイヤー4にいる時だけ移動速度を通常（1.5倍）にする */
-            input-processors = <&zip_xy_scaler 3 2>;
+            /* 加速度設定を適用 */
+            input-processors = <&pointer_accel>;
         };
     };
 };
